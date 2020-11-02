@@ -15,17 +15,15 @@ import android.widget.TextView;
 
 public class Fragment3 extends Fragment {
 
-
     private TextView text;
     private Button button;
     private FragsData fragsData;
     private Observer<Integer> numberObserver;
-
+    
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -33,7 +31,6 @@ public class Fragment3 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_3, container, false);
         text = (TextView) view.findViewById(R.id.current);
         button = (Button) view.findViewById(R.id.button_plus);
-
         fragsData = new ViewModelProvider(requireActivity()).get(FragsData.class);
 
         numberObserver = new Observer<Integer>() {
@@ -43,9 +40,7 @@ public class Fragment3 extends Fragment {
                 text.setText(newInteger.toString());
             }
         };
-
         fragsData.counter.observe(getViewLifecycleOwner(), numberObserver);
-
         button.setOnClickListener(new View.OnClickListener() {
                                       @Override
                                       public void onClick(View view) {
@@ -55,8 +50,6 @@ public class Fragment3 extends Fragment {
                                       }
                                   }
         );
-
-
         return view;
     }
 }
