@@ -15,11 +15,9 @@ import android.widget.TextView;
 
 public class Fragment2 extends Fragment {
 
-    //1.
     private FragsData fragsData;
     private Observer<Integer> numberObserver;
 
-    //2.
     private TextView text;
     private Button button;
 
