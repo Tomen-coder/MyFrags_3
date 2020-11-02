@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity" >
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
+
 
     <FrameLayout
         android:id="@+id/frame1"
@@ -15,6 +17,7 @@
         android:background="@color/color_frame1">
 
     </FrameLayout>
+
 
     <FrameLayout
         android:id="@+id/frame2"
@@ -42,5 +45,4 @@
         android:background="@color/color_frame4">
 
     </FrameLayout>
-
 </LinearLayout>
