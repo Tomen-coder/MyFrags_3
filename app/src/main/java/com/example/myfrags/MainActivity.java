@@ -140,13 +140,6 @@ public class MainActivity extends FragmentActivity implements Fragment1.OnButton
         hiden = false;
     }
 
-    /**
-     * Naprawa działania clockwice
-     * Przy wykryciu nadciśnienia na "Back" zamieniamy rozstawienie ramek w tabeli
-     */
-
-
-
     @Override
     public void onBackPressed() {
         super.onBackPressed();
